@@ -17,7 +17,7 @@ def search_author():
     return jsonify(res)
 
 @app.route('/api/v1/search_paper',methods=['POST'])
-def search_author():
+def search_paper():
     from scholarly import scholarly
     paper_name=request.POST.get('paper_name')
     paper=next(scholarly.search_pubs(paper_name))
