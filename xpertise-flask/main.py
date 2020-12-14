@@ -3,8 +3,8 @@ from flask import Flask, request, jsonify
 
 app=Flask(__name__)
 
-@app.route('',methods=['GET'])
-def search_author():
+@app.route('/',methods=['GET'])
+def index():
     return jsonify('Xpertise')
 
 @app.route('/api/v1/search_author',methods=['POST'])
