@@ -3,6 +3,10 @@ from flask import Flask, request, jsonify
 
 app=Flask(__name__)
 
+@app.route('',methods=['GET'])
+def search_author():
+    return jsonify('Xpertise')
+
 @app.route('/api/v1/search_author',methods=['POST'])
 def search_author():
     from scholarly import scholarly
