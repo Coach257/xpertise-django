@@ -10,6 +10,7 @@ def index(request):
 # 搜索作者，返回作者的个人信息
 def search_author(request):
     author_name = request.POST['author_name']
+    #author_name = 'Mark'
     author = next(scholarly.search_author(author_name))
     res = {'affiliation': author.affiliation,
            #'citedby': author.citedby,
@@ -23,6 +24,7 @@ def search_author(request):
 
 def search_paper(request):
     paper_name = request.POST['paper_name'] # 文献名
+    #paper_name = 'Li Buyu'
     paper=next(scholarly.search_pubs(paper_name))
     content = {
         'url':paper.bib['url'],
