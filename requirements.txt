@@ -1,3 +1,4 @@
 django
 gunicorn==20.0.4
 scholarly
+typing_extensions
